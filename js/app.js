@@ -177,6 +177,16 @@ document.getElementById('taskForm').addEventListener('submit', async function(e)
     }
 });
 
+document.getElementById('saveTasksBtn').addEventListener('click', async () => {
+    try {
+        await saveTasksToFile();
+        alert('Tasks saved successfully!');
+    } catch (err) {
+        console.error('Error saving tasks:', err);
+        alert('Failed to save tasks. Please try again.');
+    }
+});
+
 // Make functions global
 window.toggleTask = toggleTask;
 window.editTask = editTask;

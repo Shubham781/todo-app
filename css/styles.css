@@ -58,6 +58,11 @@ main {
   color: var(--navbar-text-color);
 }
 
+.navbar-actions {
+  display: flex;
+  gap: 1rem;
+}
+
 .add-task-btn {
   background-color: var(--primary-color);
   color: var(--navbar-text-color);
@@ -73,6 +78,28 @@ main {
 
 .add-task-btn:hover {
   background-color: #004a99;
+}
+
+.save-tasks-btn {
+  background-color: var(--primary-color);
+  color: var(--navbar-text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.save-tasks-btn i {
+  margin-right: 0.5rem;
+}
+
+.save-tasks-btn:hover {
+  background-color: #004a99; /* Slightly lighter shade of primary color */
 }
 
 .modal {
