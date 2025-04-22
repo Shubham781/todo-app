@@ -3,21 +3,11 @@ let fileHandle;
 async function initializeFileSystem() {
     try {
         if ('showSaveFilePicker' in window) {
-            try {
-                fileHandle = await window.showSaveFilePicker({
-                    suggestedName: 'tasks.txt',
-                    types: [{
-                        description: 'Text Files',
-                        accept: { 'text/plain': ['.txt'] },
-                    }],
-                });
-            } catch (err) {
-                if (err.name !== 'AbortError') {
-                    console.warn('File picker error:', err);
-                }
-                await loadFromLocalStorage(); // Fallback to localStorage
-                return;
-            }
+            // Automatically create or open the file in the 'data' folder
+            const dirHandle = await window.showDirectoryPicker();
+            fileHandle = await dirHandle.getFileHandle('tasks.txt', { create: true });
+        } else {
+            await loadFromLocalStorage(); // Fallback to localStorage
         }
         await loadTasks();
     } catch (err) {
