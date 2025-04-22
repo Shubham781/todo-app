@@ -1,22 +1,20 @@
 :root {
-  --primary-color: #0056b3; /* Professional blue */
-  --secondary-color: #f4f4f9; /* Light gray for background */
-  --text-color: #333333; /* Dark gray for text */
-  --navbar-bg: #003d80; /* Darker blue for navbar */
-  --navbar-text-color: #ffffff; /* White for navbar text */
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  --completed-task-bg: #d1e7dd; /* Light green for completed tasks */
-  --normal-task-bg: #ffffff; /* White for normal tasks */
-  --delete-icon-color: #dc3545; /* Red for delete icon */
-  --completed-task-name-color: #198754; /* Green for completed task heading */
+  --primary-color: #0056b3;
+  --secondary-color: #f4f4f9;
+  --text-color: #333333;
+  --navbar-bg: #003d80;
+  --navbar-text-color: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --completed-task-bg: #d1e7dd;
+  --normal-task-bg: #ffffff;
+  --delete-icon-color: #dc3545;
+  --completed-task-name-color: #198754;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Add transition effects for hover and focus */
 * {
   transition: all 0.3s ease-in-out;
 }
@@ -27,6 +25,13 @@ body {
   padding: 0;
   background-color: var(--secondary-color);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 .navbar {
@@ -44,7 +49,7 @@ body {
 }
 
 .navbar:hover {
-  background-color: #004a99; /* Slightly lighter shade of navbar */
+  background-color: #004a99;
 }
 
 .logo {
@@ -67,7 +72,7 @@ body {
 }
 
 .add-task-btn:hover {
-  background-color: #004a99; /* Slightly lighter shade of primary color */
+  background-color: #004a99;
 }
 
 .modal {
@@ -82,7 +87,7 @@ body {
 }
 
 .modal-content {
-  background-color: #ffffff; /* White for modal background */
+  background-color: #ffffff;
   color: var(--text-color);
   margin: 5% auto;
   padding: 2.5rem;
@@ -147,7 +152,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
-  background-color: #f9f9f9; /* Light gray for inputs */
+  background-color: #f9f9f9;
   color: var(--text-color);
   transition: all 0.2s;
 }
@@ -166,7 +171,7 @@ body {
 }
 
 .form-group input[type="datetime-local"] {
-  background-color: #f9f9f9; /* Light gray for inputs */
+  background-color: #f9f9f9;
   padding: 0.7rem;
   color: var(--text-color);
   cursor: pointer;
@@ -186,7 +191,7 @@ body {
 }
 
 .submit-btn:hover {
-  background-color: #004a99; /* Slightly lighter shade of primary color */
+  background-color: #004a99;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 120, 215, 0.2);
 }
@@ -223,7 +228,7 @@ body {
   background: var(--normal-task-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(204, 204, 204, 0.1);
@@ -234,8 +239,8 @@ body {
 }
 
 .task-item:hover {
-  transform: translateY(-8px) scale(1.02); /* Slight lift and zoom effect */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
   border-color: var(--primary-color);
   scale: 1.01;
 }
@@ -244,10 +249,9 @@ body {
   flex: 1 1 calc(25% - 2rem);
   max-width: calc(25% - 2rem);
   min-width: 250px;
-  /* background: var(--completed-task-bg); */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -274,7 +278,7 @@ body {
 
 .task-item small {
   font-size: 0.9rem;
-  color: #6c757d; /* Muted gray for small text */
+  color: #6c757d;
   font-style: italic;
 }
 
@@ -298,7 +302,7 @@ body {
 }
 
 .task-item.completed .delete-btn:hover {
-  color: #c82333; /* Slightly darker red */
+  color: #c82333;
   transform: scale(1.1);
 }
 
@@ -312,7 +316,7 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-top: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 0.75rem;
   position: relative;
 }
@@ -350,7 +354,7 @@ button {
 }
 
 button:hover {
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1.05);
 }
 
 .delete-btn {
@@ -366,15 +370,15 @@ button:hover {
 }
 
 .delete-btn:hover {
-  color: #c82333; /* Slightly darker red */
+  color: #c82333;
 }
 
 .edit-btn {
-  color: #0d6efd; /* Blue for edit icon */
+  color: #0d6efd;
 }
 
 .edit-btn:hover {
-  color: #0056b3; /* Slightly darker blue */
+  color: #0056b3;
 }
 
 .completed-btn {
@@ -382,7 +386,7 @@ button:hover {
 }
 
 .completed-btn:hover {
-  color: #146c43; /* Slightly darker green */
+  color: #146c43;
 }
 
 .no-tasks {
@@ -488,14 +492,15 @@ a:hover {
 .footer {
   text-align: center;
   padding: 1rem;
-  background-color: var(--navbar-bg); /* Match navbar background */
-  color: var(--navbar-text-color); /* Match navbar text color */
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text-color);
   font-size: 0.9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  margin-top: auto;
 }
 
 .footer p {
@@ -504,13 +509,13 @@ a:hover {
 }
 
 .footer a {
-  color: #f8d210; /* Yellow for links */
+  color: #f8d210;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer a:hover {
-  color: #ffc107; /* Slightly darker yellow */
+  color: #ffc107;
 }
 
 .footer .social-icons {
@@ -520,11 +525,11 @@ a:hover {
 
 .footer .social-icons a {
   font-size: 1.2rem;
-  color: var(--navbar-text-color); /* Match text color */
+  color: var(--navbar-text-color);
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer .social-icons a:hover {
-  color: #f8d210; /* Yellow on hover */
-  transform: scale(1.1); /* Slight zoom effect */
+  color: #f8d210;
+  transform: scale(1.1);
 }
