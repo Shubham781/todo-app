@@ -60,17 +60,6 @@ todo-app/
 └── README.md            # Documentation
 ```
 
-## Screenshots
-
-### Home Page
-![Home Page](https://via.placeholder.com/800x400?text=Home+Page)
-
-### Add Task Modal
-![Add Task Modal](https://via.placeholder.com/800x400?text=Add+Task+Modal)
-
-### Completed Tasks
-![Completed Tasks](https://via.placeholder.com/800x400?text=Completed+Tasks)
-
 ## Contributing
 
 Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull request.
