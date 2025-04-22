@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A minimalist Todo App to manage your tasks efficiently.">
+    <meta name="author" content="Your Name">
+    <title>Minimalist Todo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TodoList</div>
+        <button id="addTaskBtn" class="add-task-btn">
+            <i class="fas fa-plus"></i> Add Task
+        </button>
+    </nav>
+
+    <main>
+        <h2 class="section-heading">Todo Tasks</h2> <!-- Added heading for Todo Tasks -->
+        <section id="taskList" class="task-container" aria-label="Task List"></section>
+        
+        <h2 class="section-heading">Completed Tasks</h2> <!-- Added heading for Completed Tasks -->
+        <section id="completedTaskList" class="completed-tasks-container" aria-label="Completed Task List">
+            <h3>Completed Tasks</h3>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Task</h2>
+            <form id="taskForm" novalidate>
+                <div class="form-group">
+                    <label for="taskName">Task Name</label>
+                    <input type="text" id="taskName" required minlength="1" maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="taskDesc">Description</label>
+                    <textarea id="taskDesc" maxlength="500"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="taskDeadline">Deadline</label>
+                    <input type="datetime-local" id="taskDeadline" required>
+                </div>
+                <button type="submit" class="submit-btn">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>
+            Designed by <strong>Shubham Kukreti</strong> | 
+            <a href="mailto:shubhamkukreti7801@gmail.com">shubhamkukreti7801@gmail.com</a>
+        </p>
+        <div class="social-icons">
+            <a href="https://github.com/Shubham781" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/shubhamkukreti1" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/fileManager.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
